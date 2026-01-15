@@ -1,19 +1,19 @@
-# 🖊️ Handwritten Digits Classifier
+# Handwritten Digits Classifier
 
-## 📌 Overview
+## Overview
 
 This project is a **Handwritten Digits Classifier** built using **Scikit-Learn**. It is trained on the well-known **Digits dataset**, which contains images of handwritten numbers (0-9). The goal is to accurately classify each digit using different machine learning models and demonstrate why **Support Vector Machine (SVM) is the most effective model** for this task.
 
-## 🚀 Features
+## Features
 
-✅ **Uses Scikit-Learn's Digits dataset**\
-✅ **Preprocesses data with feature scaling for better performance**\
-✅ **Trains multiple models for comparison**\
-✅ **Evaluates SVM model performance with accuracy and classification reports**\
-✅ **Visualizes sample digits using Matplotlib**\
-✅ **Implements train-test splitting for unbiased model evaluation**
+- **Uses Scikit-Learn's Digits dataset**\
+- **Preprocesses data with feature scaling for better performance**\
+- **Trains multiple models for comparison**\
+- **Evaluates SVM model performance with accuracy and classification reports**\
+- **Visualizes sample digits using Matplotlib**\
+- **Implements train-test splitting for unbiased model evaluation**
 
-## 🛠️ Installation
+## Installation
 
 Ensure you have **Python 3.x** and install the required dependencies using:
 
@@ -21,11 +21,11 @@ Ensure you have **Python 3.x** and install the required dependencies using:
 pip install numpy matplotlib scikit-learn seaborn
 ```
 
-## 📊 Dataset
+## Dataset
 
 The dataset used in this project is the **Digits dataset** from Scikit-Learn, consisting of 8×8 grayscale images of handwritten digits (0-9). Each image is represented as a **feature vector of 64 values**.
 
-### 🔍 Sample Digits Visualization
+### Sample Digits Visualization
 
 ```python
 import matplotlib.pyplot as plt
@@ -40,9 +40,9 @@ for i, ax in enumerate(axes):
 plt.show()
 ```
 
-## 📌 Usage
+## Usage
 
-### 1️⃣ Load the Dataset
+### Load the Dataset
 
 ```python
 from sklearn import datasets
@@ -53,7 +53,7 @@ print(f"Feature Matrix Shape: {X.shape}")
 print(f"Labels Shape: {y.shape}")
 ```
 
-### 2️⃣ Preprocess the Data
+### Preprocess the Data
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -65,7 +65,7 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
 
-### 3️⃣ Train Multiple Models for Comparison
+### Train Multiple Models for Comparison
 
 ```python
 from sklearn.svm import SVC
@@ -81,7 +81,7 @@ knn_model.fit(X_train, y_train)
 print("Random Forest and KNN models trained for comparison.")
 ```
 
-### 4️⃣ Train and Evaluate the SVM Model
+### Train and Evaluate the SVM Model
 
 ```python
 from sklearn.metrics import accuracy_score, classification_report
@@ -93,7 +93,7 @@ print(f"SVM Accuracy: {accuracy_score(y_test, y_pred_svm)}")
 print(f"Classification Report for SVM:\n{classification_report(y_test, y_pred_svm)}")
 ```
 
-### 5️⃣ Visualize Predictions for SVM Model
+### Visualize Predictions for SVM Model
 
 ```python
 def plot_svm_predictions(model, X_test, y_test):
@@ -111,31 +111,31 @@ def plot_svm_predictions(model, X_test, y_test):
 plot_svm_predictions(svm_model, X_test, y_test)
 ```
 
-## 📊 Results & Analysis
+## Results & Analysis
 
 The **SVM model outperforms both Random Forest and KNN** in classifying handwritten digits with high accuracy. Below is a visualization of sample predictions made by the SVM model.
 
-### 🔹 Sample Digits from Dataset
+### Sample Digits from Dataset
 ![download](https://github.com/user-attachments/assets/e682165e-b1bd-42d4-bab1-af5967442ea7)
 
-### 🔹 SVM Model Performance Visualization
+### SVM Model Performance Visualization
 ![download](https://github.com/user-attachments/assets/1233cd62-50b2-4f86-b4e4-a89bad853477)
 
-## 🤔 Why SVM?
+## Why SVM?
 
-📌 **Higher accuracy** compared to Random Forest and KNN.\
-📌 **Performs well on high-dimensional data** like digit images.\
-📌 **Works efficiently with limited data samples.**\
-📌 **Robust to overfitting** when using a linear kernel.
+- **Higher accuracy** compared to Random Forest and KNN.\
+- **Performs well on high-dimensional data** like digit images.\
+- **Works efficiently with limited data samples.**\
+- **Robust to overfitting** when using a linear kernel.
 
-## 🔮 Future Improvements
+## Future Improvements
 
-🚀 Experiment with deep learning models like **CNNs** for better performance.\
-🚀 Fine-tune hyperparameters for improved accuracy.\
-🚀 Extend the project to recognize handwritten **characters beyond digits**.\
-🚀 Deploy the model as a **web application** for real-time digit classification.
+- Experiment with deep learning models like **CNNs** for better performance.\
+- Fine-tune hyperparameters for improved accuracy.\
+- Extend the project to recognize handwritten **characters beyond digits**.\
+- Deploy the model as a **web application** for real-time digit classification.
 
-## 📜 License
+## License
 
 This project is open-source and available under the **MIT License**.
 
