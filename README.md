@@ -113,6 +113,11 @@ plot_svm_predictions(svm_model, X_test, y_test)
 
 ## Results & Analysis
 
+After complete training and testing procedure, the accuracies of each model was:
+- SVM Accuracy: 0.9806
+- Random Forest Accuracy: 0.9722
+- KNN Accuracy: 0.9750
+
 The **SVM model outperforms both Random Forest and KNN** in classifying handwritten digits with high accuracy. Below is a visualization of sample predictions made by the SVM model.
 
 ### Sample Digits from Dataset
@@ -140,5 +145,3 @@ The **SVM model outperforms both Random Forest and KNN** in classifying handwrit
 This project is open-source and available under the **MIT License**.
 
 ---
-
-**✨ Ready to classify some digits? Run the notebook and get started! 🚀**
